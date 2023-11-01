@@ -1,0 +1,15 @@
+Explanation of each step:
+
+1. We start with a welcome message to the user.
+2. We define a function fahrenheit_to_celsius that takes a temperature in Fahrenheit and returns it in Celsius.
+3. We define a function celsius_to_fahrenheit that takes a temperature in Celsius and returns it in Fahrenheit.
+4. We create a while loop to keep the program running until the user decides to exit.
+5. We ask the user for their choice: converting Fahrenheit to Celsius, converting Celsius to Fahrenheit, or       quitting the program.
+6. We check the user's choice.
+7. If the user chooses to convert Fahrenheit to Celsius, we get the temperature in Fahrenheit from the user.
+8. We call the fahrenheit_to_celsius function to convert and print the result.
+9. If the user chooses to convert Celsius to Fahrenheit, we get the temperature in Celsius from the user.
+10. We call the celsius_to_fahrenheit function to convert and print the result.
+11. If the user chooses to quit, we exit the program.
+12. If the user enters an invalid choice, we notify them and ask again.
+13. This program allows the user to convert temperatures back and forth between Fahrenheit and Celsius until they decide to quit.

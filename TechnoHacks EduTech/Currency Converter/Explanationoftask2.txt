@@ -1,0 +1,43 @@
+*with open('currencyData.txt') as f:
+    lines = f.readlines()
+
+1. This code snippet opens a file named 'currencyData.txt' in the current directory and assigns it to the variable f.
+2. The with statement is used to ensure that the file is properly closed after it's been read. This is done automatically when the indented block is exited.
+3. f.readlines() reads all the lines from the file 'currencyData.txt' and stores them in a list called lines.
+
+*currencyDict = {}
+for line in lines:
+    parsed = line.split("\t")
+    currencyDict[parsed[0]] = parsed[1]
+
+1. An empty dictionary currencyDict is created. This dictionary will be used to store currency conversion rates.
+2. The code then enters a for loop that iterates through each line in the lines list (each line from the file).
+3. line.split("\t") splits each line into a list of strings using the tab character '\t' as the delimiter. The resulting list is assigned to the parsed variable. This assumes that the lines in 'currencyData.txt' are formatted with currency names and their corresponding conversion rates separated by tabs.
+4. The currency name (found at index 0 in the parsed list) is used as the key, and the conversion rate (found at index 1) is used as the value to populate the currencyDict dictionary.
+
+*amount = int(input("Enter amount:\n"))
+
+1. This line prompts the user to input an amount and reads the input as a string using the input function. The entered string is then converted to an integer using int(), and the result is stored in the amount variable.
+
+*print("Enter the name of the currency you want to convert this amount to? Available Options:\n")
+[print(item) for item in currencyDict.keys()]
+
+1. This code displays a message to the user asking them to enter the name of the currency to which they want to convert the entered amount. It also provides a list of available currency options.
+2. It uses a list comprehension to print each currency name, which is extracted from the keys of the currencyDict dictionary.
+
+*currency = input("Please enter one of these values: \n")
+
+1.Similar to step 8, this line prompts the user to input the name of the currency they want to convert to and stores the input as a string in the currency variable.
+
+*print(f"{amount} INR is equal to {amount * float(currencyDict[currency])} {currency}")
+
+1.This line calculates the converted amount based on the user's input.
+  I.{amount} INR is the initial amount entered by the user.
+  II.amount * float(currencyDict[currency]) calculates the converted amount by multiplying the initial amount by the conversion rate obtained from the currencyDict dictionary. float() is used to ensure the conversion rate is treated as a floating-point number.
+  III.{currency} is the currency to which the user wants to convert the amount.
+  
+1. The result is printed to the console using an f-string, showing the original amount in INR and the equivalent amount in the chosen currency.
+
+
+
+
